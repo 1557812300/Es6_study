@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+         .item {
+            width: 100px;
+            height: 50px;
+            border: solid 1px rgb(42, 156, 156);
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="page-header">点击切换颜色</h2>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <script>
+        // 1.获取div元素
+        let items=document.getElementsByClassName('item')
+        // 2.遍历并绑定事件
+        for(var i=0;i<items.length;i++){
+            items[i].onclick=function(){
+                // 修改当前元素的背景颜色
+                // this.style.background='pink'; //点击：每块模块变成红色
+                items[i].style.background='pink';//点击：不可以每块模块变红色
+            }
+        }
+    </script>
+</body>
+</html>
