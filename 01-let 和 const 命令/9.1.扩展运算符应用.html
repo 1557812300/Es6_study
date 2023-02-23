@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        // 1.数组的合并  情圣 误杀 唐探
+        const huluw=['大娃','二娃','三娃','四娃']
+        const xiyouji=['唐僧','猪八戒','西游记','沙僧']
+        const dongman=huluw.concat(xiyouji)
+        console.log(dongman)
+        // ['大娃', '二娃', '三娃', '四娃', '唐僧', '猪八戒', '西游记', '沙僧']
+        const donghua=[...huluw,...xiyouji]
+        console.log(donghua)
+
+        // 2.数组的克隆
+        const three =['E','G','F']
+        const threecao=[...three]
+        console.log(threecao)
+        // ['E', 'G', 'F']
+
+        // 将伪类数组转为真正的数组
+        const divs=document.querySelectorAll('div')
+        const divArr=[...divs]
+        console.log(divArr)
+    </script>
+</body>
+</html>
