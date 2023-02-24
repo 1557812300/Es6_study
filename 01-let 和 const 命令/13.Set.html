@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集合</title>
+</head>
+<body>
+    <script>
+        //0、声明一个 set
+        let s = new Set();
+        let s2 = new Set(['大事儿','小事儿','好事儿','坏事儿','小事儿']);
+ 
+        //1、遍历每个元素
+        for(let v of s2){
+            console.log(v);
+        }
+        /**
+         * 结果: 大事儿
+         *       小事儿
+         *       好事儿
+         *       坏事儿
+         */
+ 
+        //2、元素个数（set去重）
+        console.log(s2.size);
+        // 结果：4
+ 
+        //3、添加新的元素
+        s2.add('喜事儿');
+        console.log(s2);
+        // 结果：Set(5) {"大事儿", "小事儿", "好事儿", "坏事儿", "喜事儿"}
+ 
+        //4、删除元素
+        s2.delete('坏事儿');
+        console.log(s2)
+        // 结果：Set(4) {"大事儿", "小事儿", "好事儿", "喜事儿"}
+ 
+        //5、检测
+        console.log(s2.has('糟心事'));
+        // 结果：false
+ 
+        //6、清空
+        s2.clear();
+        console.log(s2);
+        // Set(0) {}
+        
+    </script>
+</body>
+</html>

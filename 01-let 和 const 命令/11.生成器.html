@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成器</title>
+</head>
+<body>
+    <script>
+        // 生成器函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同
+        // 生成器其实就是一种特殊的函数
+        // 异步编程  纯调用函数  node fs ajax  mongodb
+        // 函数代码的分隔符
+
+       function * gen() {
+        yield '111'
+        yield '222'
+        yield '333'
+        }
+
+        let item=gen()
+        console.log(item.next())
+        console.log(item.next())
+        console.log(item.next())
+         /**
+         * {value: "一只没有耳朵", done: false}
+         * {value: "一只没有尾部", done: false}
+         * {value: "真奇怪", done: false}
+         */ 
+
+        //  遍历
+        for(let v of gen()){
+            console.log(v)
+        }
+        // 111  222  333
+    </script>
+</body>
+</html>
