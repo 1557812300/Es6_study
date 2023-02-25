@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+         
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击 DIV 换色</title>
+    <link crossorigin="anonymous" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet">
+    <style>
+        .item {
+            width: 100px;
+            height: 50px;
+            border: solid 1px rgb(42, 156, 156);
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <h2 class="page-header">点击切换颜色</h2>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <script>
+        //1、获取div元素对象
+        let items = document.getElementsByClassName('item');
+ 
+        //2、遍历并绑定事件
+        // for (var i = 0; i < items.length; i++) {
+        //     items[i].onclick = function () {
+        //         //修改当前元素的背景颜色
+        //         this.style.background = 'pink';   // 点击：每个模块变成红色
+        //         // items[i].style.background = 'pink';  // 点击：不可以每个模块不可以变成粉色
+        //     }
+        // }
+        // console.log("输出结果：" + i) // 3
+        // 结果：var声明的变量i为全局变量，遍历完以后i变为3,然后再去点击每个模块，找不到相应的当前元素
+        
+        for(let i=0;i<items.length;i++){
+            items[i].onclick=function(){
+                // 修改当前元素的背景颜色
+                // this.style.background='pink'
+                items[i].style.background="pink"
+            }
+        }
+        // console.log("输出结果：" + i) // 3
+        // 结果：let声明的变量i为局部变量，遍历完以后i变为2，然后再去点击每个模块，可以找到相应的当前元素
+    </script>
+</body>
+ 
+</html>
