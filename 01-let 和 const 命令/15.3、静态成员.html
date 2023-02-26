@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Phone() {  }
+        Phone.name='手机'
+        Phone.change=function(){
+            console.log('我可以改变世界')
+        }
+        Phone.prototype.size='寸'
+
+        let nokia=new Phone()
+
+        console.log(nokia.name)
+        console.log(nokia.change)
+        console.log(nokia.size)
+
+        // undefined
+        // undefined
+        // 寸
+        
+        class MobilePhone{
+            static name='手机'
+            static change(){
+                console.log("我们可以改变世界")
+            }
+        }
+
+        let iphone=new MobilePhone()
+        console.log(iphone.name)
+        console.log(MobilePhone.name)
+        
+        // undefined
+        // 手机
+        
+    </script>
+</body>
+</html>

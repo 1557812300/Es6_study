@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类声明</title>
+</head>
+<body>
+    <script>
+        //手机
+       function Phone(name,price,color) {
+        this.name = name;
+        this.price = price;
+        this.color = color;
+        }
+
+        // 添加方法
+        Phone.prototype.call=function(){
+            console.log("我可以打电话！！")
+        }
+
+        // 实例化对象
+        let Huawei=new Phone('华为',5999,'white')
+        console.log(111)
+        Huawei.call()
+        // 我可以打电话！！
+        console.log(Huawei)
+        // {name: '华为', price: 5999, color: 'white'}
+
+        // class
+        class Shouji{
+            constructor(name,price,color){
+                this.name = name;
+                this.price = price;
+                this.color = color;
+            }
+
+            // 方法必须使用该语法，不能使用ES5的对象完整性形式
+            call(){
+                console.log("我可以打电话了")
+            }
+        }
+
+        let onePlus=new Shouji('1+',1999)
+        onePlus.call()
+        // 我可以打电话了
+        console.log(onePlus)
+        // Shouji {name: '1+', price: 1999, color: undefined}
+
+    </script>
+</body>
+</html>
